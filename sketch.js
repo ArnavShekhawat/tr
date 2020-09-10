@@ -36,7 +36,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  trex = createSprite(50,height-90,20,50);
+  trex = createSprite(50,height-70,20,50);
   
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
@@ -129,7 +129,7 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 60 === 0) {
-    var cloud = createSprite(600,120,40,10);
+    var cloud = createSprite(600,height-70,40,10);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
     cloud.scale = 0.5;
@@ -150,7 +150,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
-    var obstacle = createSprite(width/2,height-10,width,125);
+    var obstacle = createSprite(50,height-70,20,50);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
     

@@ -77,7 +77,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
-    if(keyDown("space") && trex.y >= 159) {
+    if(keyDown("space") && trex.y >= height-120) {
       trex.velocityY = -12;
 
     }
@@ -150,7 +150,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
-    var obstacle = createSprite(600,height-90,10,40);
+    var obstacle = createSprite(width/2,height-10,width,125);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
     
